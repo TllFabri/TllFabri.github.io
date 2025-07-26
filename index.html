@@ -1,0 +1,142 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Fabri</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 text-white p-4 sticky top-0 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Thiago Fabri</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#sobre" class="hover:text-gray-300">Om</a></li>
+                <li><a href="#projetos" class="hover:text-gray-300">Projects</a></li>
+                <li><a href="#habilidades" class="hover:text-gray-300">Skills</a></li>
+                <li><a href="#contato" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-16 bg-black">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">About me!</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+                Hi, I'm Thiago Fabri a full-stack developer passionate about creating web development projects and technologies that positively impact people's lives. I'm always seeking new challenges and opportunities to learn and grow. I'm proficient in JavaScript and Python.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos" class="text-lg text-gray-300 max-w-2xl mx-auto">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projeto 1 -->
+                <div class="text-lg text-gray-300 max-w-2xl mx-auto">
+                    <h3 class="text-xl font-semibold mb-2">Python lab</h3>
+                    <p class="text-gray-600 mb-4">dedicated to learning and practicing Python .</p>
+                    <a href="https://github.com/TllFabri/python-lab" class="text-blue-600 hover:underline">View Project</a>
+                </div>
+                <!-- Projeto 2 -->
+                <div class="text-lg text-gray-300 max-w-2xl mx-auto">
+                    <h3 class="text-xl font-semibold mb-2">HTML lab</h3>
+                    <p class="text-gray-600 mb-4">dedicated to learning and practicing HTML. Here you'll find examples, exercises, and notes. .</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Project</a>
+                </div>
+                <!-- Projeto 3 -->
+                <div class="text-lg text-gray-300 max-w-2xl mx-auto">
+                    <h3 class="text-xl font-semibold mb-2">Java lab</h3>
+                    <p class="text-gray-600 mb-4">...</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="habilidades" class="py-16 bg-black">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Skills</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-blue-600 text-white px-4 py-2 rounded-full">HTML</span>
+                <span class="bg-blue-600 text-white px-4 py-2 rounded-full">CSS</span>
+                <span class="bg-blue-600 text-white px-4 py-2 rounded-full">JavaScript</span>
+                <span class="bg-blue-600 text-white px-4 py-2 rounded-full">Python</span>
+                <span class="bg-blue-600 text-white px-4 py-2 rounded-full">Java</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="text-lg text-gray-300 max-w-2xl mx-auto">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Contact</h2>
+            <p class="text-lg text-gray-700 mb-6">Contact me!</p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:thiagobarrosfabri07@gmail.com" class="text-blue-600 hover:text-blue-800">Gmail</a>
+                <a href="https://www.linkedin.com/in/thiago-fabri-b125972ba/" class="text-blue-600 hover:text-blue-800">LinkedIn</a>
+                <a href="https://github.com/TllFabri" class="text-blue-600 hover:text-blue-800">GitHub</a>
+                <a href="" ></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+        <p>&copy; 2025 Thiago Fabri. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript para Smooth Scroll -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
