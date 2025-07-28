@@ -18,3 +18,17 @@ html {
     --light: #e2e8f0;
     --glass: rgba(255, 255, 255, 0.1);
 }
+
+body{
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.navigation{
+    position: fixed;
+    top: 0;
+    background: rgba(15, 23, 42, 0.8);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
