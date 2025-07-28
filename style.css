@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+:root{
+    --primary: #4f46e5;
+    --secondary: #7c3aed;
+    --dark: #0f172a;
+    --darker: #0a0f1c;
+    --light: #e2e8f0;
+    --glass: rgba(255, 255, 255, 0.1);
+}
