@@ -91,3 +91,28 @@ h1 {
     color: var(--light);
 }
 
+.about{
+    padding: 6rem 2rem;
+}
+
+.overline {
+    font-size: 3rem;
+    color: var(--light);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.overlay-box {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--glass);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.over-paragraph {
+    text-align: center;
+    font-size: 1rem;
+}
