@@ -116,3 +116,57 @@ h1 {
     text-align: center;
     font-size: 1rem;
 }
+
+.projects {
+    padding: 6rem 2rem;
+}
+
+.projects-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-card{
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px slod var(--glass);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.projects-Title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 47px;
+}
+
+.projects-card:hover {
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.projects-Image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.box-title-projects {
+    padding: 1.5rem;
+}
+
+.paragraph-projects {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem;
+}
+
+.info-projects{
+    margin-bottom: 5px;
+}
+
