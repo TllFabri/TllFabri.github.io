@@ -94,14 +94,14 @@
         function enviarWhats(event) {
             event.preventDefault()
 
-            const name = document.getElementById('name');
-            const message = document.getElementById('message');
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
             const telephone = '5532998558590';
 
             const texto = `Hello! My name is ${name}, ${message}`;
             const msgFormatada = encodeURIComponent(texto);
 
-            const url = `https://whatsa.me/${telephone}/?t=${msgFormatada}`;
+            const url = `https://wa.me/${telephone}?text=${msgFormatada}`;
 
             window.open(url, '_blank');
         }
