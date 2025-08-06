@@ -77,12 +77,12 @@
 
     <section id="contacts" class="contacts">
         <h2 class="contacts-title">Get in touch</h2>
-        <form class="form-contacts" id="form">
+        <form class="form-contacts" id="form" onsubmit="enviarWhats(event)">
             <div class="name-form">
-                <input placeholder="Name" class="camp-form">
+                <input placeholder="Name" class="camp-form" id="name">
             </div>
             <div class="team-form">
-                <textarea class="camp-form " placeholder="Type your message"></textarea>
+                <textarea class="camp-form " placeholder="Type your message" rows="5" id="message"></textarea>
             </div>
 
             <button type="submit" class="button-form">Send WhatsApp</button>
@@ -90,6 +90,23 @@
         </form>
     </section>
 
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const name = document.getElementById('name');
+            const message = document.getElementById('message');
+            const telephone = '5532998558590';
+
+            const texto = `Hello! My name is ${name}, ${message}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://whatsa.me/${telephone}/?t=${msgFormatada}`;
+
+            window.open(url, '_blank');
+        }
+
+    </script>
 </body>
 
 </html>
