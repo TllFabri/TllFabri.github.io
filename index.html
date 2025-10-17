@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Thiago Fabri, Back End Developer passionate about technology and web development projects.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/edward.jpg">
     <title>Thiago Fabri | Portfolio</title>
@@ -12,26 +12,17 @@
 <body>
     <div class="particles"></div>
 
-
     <nav class="navigation">
         <ul class="menu">
-            <li>
-                <a href="#start" class="menu-link">Start</a>
-            </li>
-            <li>
-                <a href="#about" class="menu-link">About</a>
-            </li>
-            <li>
-                <a href="#Projects" class="menu-link">Projects</a>
-            </li>
-            <li>
-                <a href="#contact" class="menu-link">Contact</a>
-            </li>
+            <li><a href="#start" class="menu-link">Start</a></li>
+            <li><a href="#about" class="menu-link">About</a></li>
+            <li><a href="#projects" class="menu-link">Projects</a></li>
+            <li><a href="#contacts" class="menu-link">Contact</a></li>
         </ul>
     </nav>
 
     <main id="start" class="Header">
-        <img src="img/TllFabri.png" alt="Photo by Thiago Fabri" class="profile-photo">
+        <img src="img/TllFabri.png" alt="Portrait of Thiago Fabri" class="profile-photo">
         <h1>Thiago Fabri</h1>
         <p class="Header-sub-title">Back End Developer</p>
     </main>
@@ -40,8 +31,7 @@
         <h2 class="overline">About me</h2>
         <div class="overlay-box">
             <p class="over-paragraph">
-                Hi, I'm a back end developer passionate about creating web development projects and technologies that
-                positively impact people's lives. I'm always seeking new challenges and opportunities to learn and grow.
+                Hi, I'm a back end developer passionate about creating web development projects and technologies that positively impact people's lives. I'm always seeking new challenges and opportunities to learn and grow.
             </p>
         </div>
     </section>
@@ -50,29 +40,36 @@
         <h2 class="projects-Title">My Projects</h2>
         <div class="projects-box">
 
-            <div class="projects-card">
-                <img src="/img/numero.png" alt="Projects 1" class="projects-Image">
+            <article class="projects-card">
+                <img src="img/numero.png" alt="Secret Number Game interface" class="projects-Image">
                 <div class="box-title-projects">
                     <h3 class="info-projects">Secret Number Game</h3>
-                    <p class="paragraph-projects">The program generates a random number within a defined range, and the player must guess what it is. With each guess, the game informs whether the secret number is greater or less than the guess.</p>
+                    <p class="paragraph-projects">
+                        The program generates a random number within a defined range, and the player must guess it. The game provides hints whether the secret number is higher or lower.
+                    </p>
                 </div>
-            </div>
+            </article>
 
-            <div class="projects-card">
-                <img src="/img/Login.png" alt="Projects 1" class="projects-Image">
+            <article class="projects-card">
+                <img src="img/Login.png" alt="Login interface project" class="projects-Image">
                 <div class="box-title-projects">
-                    <h3 class="info-projects">Login</h3>
-                    <p class="paragraph-projects">This project is a simple, elegant, and responsive login interface, built with pure HTML and CSS. It uses icons from Boxicons and a clean design, ideal for user authentication on websites and web applications.</p>
+                    <h3 class="info-projects">Login Page</h3>
+                    <p class="paragraph-projects">
+                        A simple, elegant, and responsive login interface built with HTML and CSS. Uses Boxicons and a clean layout for authentication pages.
+                    </p>
                 </div>
-            </div>
+            </article>
 
-            <div class="projects-card">
-                <img src="img/click.png" alt="Projects 3" class="projects-Image">
+            <article class="projects-card">
+                <img src="img/click.png" alt="Click Quickly game preview" class="projects-Image">
                 <div class="box-title-projects">
                     <h3 class="info-projects">Click Quickly</h3>
-                    <p class="paragraph-projects">A simple and addictive game made with HTML, CSS and JavaScript where the objective is to click the button as quickly as possible as it changes position. </p>
+                    <p class="paragraph-projects">
+                        A fast-paced game made with HTML, CSS, and JavaScript where you must click the button as quickly as possible as it moves around the screen.
+                    </p>
                 </div>
-            </div>
+            </article>
+
         </div>
     </section>
 
@@ -80,34 +77,26 @@
         <h2 class="contacts-title">Get in touch</h2>
         <form class="form-contacts" id="form" onsubmit="enviarWhats(event)">
             <div class="name-form">
-                <input placeholder="Name" class="camp-form" id="name">
+                <input placeholder="Name" class="camp-form" id="name" name="name" required>
             </div>
             <div class="team-form">
-                <textarea class="camp-form " placeholder="Type your message" rows="5" id="message"></textarea>
+                <textarea class="camp-form" placeholder="Type your message" rows="5" id="message" name="message" required></textarea>
             </div>
-
             <button type="submit" class="button-form">Send WhatsApp</button>
-
         </form>
     </section>
 
     <script>
         function enviarWhats(event) {
-            event.preventDefault()
-
-            const name = document.getElementById('name').value;
-            const message = document.getElementById('message').value;
+            event.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const message = document.getElementById('message').value.trim();
             const telephone = '5532998558590';
-
-            const texto = `Hello! My name is ${name}, ${message}`;
+            const texto = `Hello! My name is ${name}. ${message}`;
             const msgFormatada = encodeURIComponent(texto);
-
             const url = `https://wa.me/${telephone}?text=${msgFormatada}`;
-
             window.open(url, '_blank');
         }
-
     </script>
 </body>
-
 </html>
