@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Thiago Fabri, Back End Developer passionate about technology and web development projects.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <script src="script.js"></script>
+    <title>tfabri.dev | Thiago Fabri - Engenheiro de Software</title>
+</head>
+
+<body>
+
+    <div class="particles"></div>
+
+    <header class="top-bar">
+        <a href="#start" class="logo">
+            tfabri.dev
+        </a>
+
+        <nav class="navigation">
+            <ul class="menu">
+                <li><a href="#start" class="menu-link" data-pt="Início" data-en="Home">Início</a></li>
+                <li><a href="#skills" class="menu-link" data-pt="Habilidades" data-en="Skills">Habilidades</a></li>
+                <li><a href="#projects" class="menu-link" data-pt="Projetos" data-en="Projects">Projetos</a></li>
+                <li><a href="#contacts" class="menu-link" data-pt="Contato" data-en="Contact">Contato</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="lang-toggle" class="icon-btn" type="button" aria-label="Alternar idioma"
+                    title="Alternar idioma">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                        stroke="currentColor" stroke-width="1.8">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M3 12h18"></path>
+                        <path d="M12 3c2.5 2.7 4 6 4 9s-1.5 6.3-4 9c-2.5-2.7-4-6-4-9s1.5-6.3 4-9z"></path>
+                    </svg>
+                    <span id="lang-label">PT</span>
+                </button>
+                <button id="theme-toggle" class="icon-btn" type="button" aria-label="Alternar tema claro/escuro"
+                    title="Alternar tema">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                        fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="start" class="Header">
+        <div class="Header-text">
+            <span class="hero-badge" data-pt="Engenheiro de Software &amp; IA"
+                data-en="Software Engineer &amp; AI">Engenheiro de Software &amp; IA</span>
+            <h1>Thiago Fabri</h1>
+            <p class="Header-sub-title" data-pt="Back End Developer" data-en="Back End Developer">Back End Developer</p>
+            <p class="Header-description"
+                data-pt="TEXTO PROVISÓRIO: descreva aqui suas principais tecnologias e o tipo de solução que você constrói."
+                data-en="PLACEHOLDER TEXT: describe here your main technologies and the kind of solutions you build.">
+                TEXTO PROVISÓRIO: descreva aqui suas principais tecnologias e o tipo de solução que você constrói.
+            </p>
+            <div class="hero-cta">
+                <a href="#contacts" class="hero-link-primary" data-pt="Entre em contato →"
+                    data-en="Get in touch →">Entre em contato →</a>
+                <a href="pdf/curriculo_Thiago_Fabri.pdf" class="hero-link-secondary" download>
+                    <span data-pt="Baixar Currículo" data-en="Download CV">Baixar Currículo</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none"
+                        stroke="currentColor" stroke-width="1.8">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <path d="M14 2v6h6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <img src="img/Perfil_web.png" alt="Portrait of Thiago Fabri" class="profile-photo">
+    </main>
+
+    <section id="skills" class="skills">
+        <h2 class="skills-title" data-pt="Expertise Técnica" data-en="Technical Expertise">Expertise Técnica</h2>
+        <p class="skills-subtitle" data-pt="TEXTO PROVISÓRIO: uma frase curta resumindo seu conjunto de ferramentas."
+            data-en="PLACEHOLDER TEXT: a short sentence summarizing your toolset.">
+            TEXTO PROVISÓRIO: uma frase curta resumindo seu conjunto de ferramentas.
+        </p>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26"
+                    fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="3" y="4" width="18" height="6" rx="1.5"></rect>
+                    <rect x="3" y="14" width="18" height="6" rx="1.5"></rect>
+                </svg>
+                <h3 data-pt="Java/Kotlin" data-en="Java/Kotlin">Java/Kotlin</h3>
+                <p data-pt="Spring Boot" data-en="Spring Boot">Spring Boot</p>
+            </div>
+
+            <div class="skill-card">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26"
+                    fill="none" stroke="currentColor" stroke-width="1.8">
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                    <polyline points="16 6 22 12 16 18"></polyline>
+                </svg>
+                <h3 data-pt="Python" data-en="Python">Python</h3>
+                <p data-pt="" data-en=""></p>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <h2 class="projects-Title" data-pt="Projetos Destacados" data-en="Featured Projects">Projetos Destacados</h2>
+        <p class="projects-subtitle" data-pt="Uma seleção dos meus trabalhos mais recentes."
+            data-en="A selection of my most recent work.">
+            Uma seleção dos meus trabalhos mais recentes.
+        </p>
+        <div class="projects-box">
+
+            <article class="projects-card">
+                <img src="img/numero.png" alt="Secret Number Game interface" class="projects-Image">
+                <div class="box-title-projects">
+                    <h3 class="info-projects">Secret Number Game</h3>
+                    <p class="paragraph-projects"
+                        data-pt="O programa gera um número aleatório dentro de um intervalo definido, e o jogador deve adivinhá-lo. O jogo dá dicas se o número secreto é maior ou menor."
+                        data-en="The program generates a random number within a defined range, and the player must guess it. The game provides hints whether the secret number is higher or lower.">
+                        O programa gera um número aleatório dentro de um intervalo definido, e o jogador deve
+                        adivinhá-lo. O jogo dá dicas se o número secreto é maior ou menor.
+                    </p>
+                    <div class="projects-tags">
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projects-card">
+                <img src="img/Login.png" alt="Login interface project" class="projects-Image">
+                <div class="box-title-projects">
+                    <h3 class="info-projects">Login Page</h3>
+                    <p class="paragraph-projects"
+                        data-pt="Uma interface de login simples, elegante e responsiva, construída com HTML e CSS. Usa Boxicons e um layout limpo para páginas de autenticação."
+                        data-en="A simple, elegant, and responsive login interface built with HTML and CSS. Uses Boxicons and a clean layout for authentication pages.">
+                        Uma interface de login simples, elegante e responsiva, construída com HTML e CSS. Usa Boxicons e
+                        um layout limpo para páginas de autenticação.
+                    </p>
+                    <div class="projects-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Boxicons</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projects-card">
+                <img src="img/click.png" alt="Click Quickly game preview" class="projects-Image">
+                <div class="box-title-projects">
+                    <h3 class="info-projects">Click Quickly</h3>
+                    <p class="paragraph-projects"
+                        data-pt="Um jogo rápido feito com HTML, CSS e JavaScript onde você precisa clicar no botão o mais rápido possível enquanto ele se move pela tela."
+                        data-en="A fast-paced game made with HTML, CSS, and JavaScript where you must click the button as quickly as possible as it moves around the screen.">
+                        Um jogo rápido feito com HTML, CSS e JavaScript onde você precisa clicar no botão o mais rápido
+                        possível enquanto ele se move pela tela.
+                    </p>
+                    <div class="projects-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <h2 class="contacts-title" data-pt="Entre em contato" data-en="Get in touch">Entre em contato</h2>
+        <p class="contacts-subtitle" data-pt="Interessado em trabalhar juntos? Vamos conversar sobre seu projeto."
+            data-en="Interested in working together? Let's talk about your project.">
+            Interessado em trabalhar juntos? Vamos conversar sobre seu projeto.
+        </p>
+
+        <div class="contact-card">
+            <h3 data-pt="Entre em Contato" data-en="Get in Touch">Entre em Contato</h3>
+            <div class="contact-methods">
+                <a href="https://wa.me/5532998558590" class="contact-method" target="_blank" rel="noopener">
+                    <span class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                            stroke="currentColor" stroke-width="1.8">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span class="contact-text">
+                        <span class="contact-label">WhatsApp</span>
+                        <span class="contact-value" data-pt="Me mande uma mensagem" data-en="Send me a message">Me mande
+                            uma mensagem</span>
+                    </span>
+                </a>
+
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thiagobarrosfabri07@gmail.com" class="contact-method">
+                    <span class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                            stroke="currentColor" stroke-width="1.8">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 6-10 7L2 6"></path>
+                        </svg>
+                    </span>
+                    <span class="contact-text">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">thiagobarrosfabri07@gmail.com</span>
+                    </span>
+                </a>
+
+                <a href="https://github.com/TllFabri" class="contact-method" target="_blank" rel="noopener">
+                    <span class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            fill="currentColor">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 12 2z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span class="contact-text">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">@TllFabri</span>
+                    </span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/tllfabri/" class="contact-method" target="_blank" rel="noopener">
+                    <span class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            fill="currentColor">
+                            <path
+                                d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.24h4.56V23H.22V8.24zm7.94 0h4.37v2.01h.06c.61-1.15 2.09-2.36 4.3-2.36 4.6 0 5.45 3.03 5.45 6.97V23h-4.55v-6.4c0-1.53-.03-3.5-2.13-3.5-2.13 0-2.46 1.66-2.46 3.38V23H8.16V8.24z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span class="contact-text">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">in/tllfabri</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-info">
+            <strong>Thiago Fabri</strong>
+            <span data-pt="Back End Developer" data-en="Back End Developer">Back End Developer</span>
+        </div>
+        <div class="footer-socials">
+            <a href="https://github.com/TllFabri" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path
+                        d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 12 2z">
+                    </path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/tllfabri/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path
+                        d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.24h4.56V23H.22V8.24zm7.94 0h4.37v2.01h.06c.61-1.15 2.09-2.36 4.3-2.36 4.6 0 5.45 3.03 5.45 6.97V23h-4.55v-6.4c0-1.53-.03-3.5-2.13-3.5-2.13 0-2.46 1.66-2.46 3.38V23H8.16V8.24z">
+                    </path>
+                </svg>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thiagobarrosfabri07@gmail.com" target="_blank"
+                aria-label="Email">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                    stroke="currentColor" stroke-width="1.8">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 6-10 7L2 6"></path>
+                </svg>
+
+            </a>
+        </div>
+        <p class="footer-copyright">
+            <span data-en="© 2026 Thiago Fabri. All rights reserved.">© 2026 Thiago Fabri. All rights reserved.</span>
+        </p>
+    </footer>
+</body>
+
+
+</html>
